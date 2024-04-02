@@ -1,10 +1,10 @@
-import Head from "next/head";
-import Link from "next/link";
+import Head from 'next/head';
+import Link from 'next/link';
 
-import { api } from "~/utils/api";
+import { api } from '~/utils/api';
 
 export default function Home() {
-  const hello = api.post.hello.useQuery({ text: "from tRPC" });
+  const hello = api.post.hello.useQuery({ text: 'from tRPC' });
 
   return (
     <>
@@ -26,8 +26,7 @@ export default function Home() {
             >
               <h3 className="text-2xl font-bold">First Steps →</h3>
               <div className="text-lg">
-                Just the basics - Everything you need to know to set up your
-                database and authentication.
+                Just the basics - Everything you need to know to set up your database and authentication.
               </div>
             </Link>
             <Link
@@ -37,15 +36,13 @@ export default function Home() {
             >
               <h3 className="text-2xl font-bold">Documentation →</h3>
               <div className="text-lg">
-                Learn more about Create T3 App, the libraries it uses, and how
-                to deploy it.
+                Learn more about Create T3 App, the libraries it uses, and how to deploy it.
               </div>
             </Link>
           </div>
-          <p className="text-2xl text-white">
-            {hello.data ? hello.data.greeting : "Loading tRPC query..."}
-          </p>
+          <p className="text-2xl text-white">{hello.data ? hello.data.greeting : 'Loading tRPC query...'}</p>
         </div>
+        asd
       </main>
     </>
   );
